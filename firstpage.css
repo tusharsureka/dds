@@ -23,7 +23,7 @@
 }
 
 
-.sidebar {
+/* .sidebar {
     display: flex;
     flex-direction: column;
     width: 240px;
@@ -32,7 +32,6 @@
     color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px #ccc;
-    /* justify-content: space-between; */
   }
 
   .sidebar h3 {
@@ -58,7 +57,7 @@
   .sidebar ul li a:hover {
     color: #ccc;
     
-  }
+  } */
 
 
 
