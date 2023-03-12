@@ -36,13 +36,18 @@ app.post("/register" ,async(req,res) => {
 
         if(password === cpassword){
             const registerEmployee = new Register({
-                Name: req.body.Name,
+
+                Username: req.body.Username,
+                Email: req.body.Email,
+                Department: req.body.Department,
+                postof: req.body.postof,
                 Password: req.body.Password,
                 confirmPassword: req.body.confirmPassword
             })
 
             const registered = await registerEmployee.save();
             res.status(201).render("index");
+            console.log("saved details");
         }else{
             res.send("Passwords are not matching");
         }
@@ -56,12 +61,12 @@ app.post("/index", async(req,res) => {
         const name = req.body.Username;
         const password = req.body.Password;
 
-        const userName = await Register.findOne({Name:name});
+        const userName = await Register.findOne({Username:name});
 
         const isMatch = await bcrypt.compare(password, userName.Password) 
 
         if(isMatch){
-            res.status(201).render("index");
+            res.status(201).render("dashboard");
         }else{
             res.send("Invalid Login Details");
         }

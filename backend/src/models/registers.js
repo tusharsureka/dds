@@ -2,7 +2,20 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 const employeeSchema = new mongoose.Schema({
-    Name :{
+    Username :{
+        type:String,
+        required:true
+    },
+    Email :{
+        type:String,
+        required:true,
+
+    },
+    Department :{
+        type:String,
+        required:true
+    },
+    postof :{
         type:String,
         required:true
     },

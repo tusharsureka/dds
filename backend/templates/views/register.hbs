@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/signup.css" />
     
   </head>
   <body>
     <div class="container">
       <div class="form-container">
         <div class="form-section">
-          <h1>Sign Up</h1>
+          <h1>Register</h1>
+
           <form action="/register" method="POST">
-            <input type="text" placeholder="Username" name="Name">
+            <input type="text" placeholder="Username" name="Username">
+            <input type="email" placeholder="Email" name="Email">
+            
+            <label class="department"></label>
+            <select name="Department">
+                <option selected disabled>Select Department</option>
+                <option>Department of computer science and Engineering</option>
+                <option>Department of electical and Engineering</option>
+                <option>Department of Civil Engineering</option>
+                <option>Department of Business Studies</option>
+                <option>Department of Commerce</option>
+                <option>Department of Mechanical Enginnering</option>
+            </select>
+            <label class="department position"></label>
+            <select name="postof">
+                <option selected disabled>Select User</option>
+                <option>Department Admin</option>
+                <option>Head of Department</option>
+            </select>
             <input type="password" placeholder="Password" name="Password">
-            <input type="con_password" placeholder="Confirm Password" name="confirmPassword">
+            <input type="password" placeholder="Confirm Password" name="confirmPassword">
+
             <input type="submit" value="Register">
           </form>
         </div>
