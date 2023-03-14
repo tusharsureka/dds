@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
  
 require("./db/conn");
 const Register = require("./models/registers");
@@ -44,6 +45,9 @@ app.post("/register" ,async(req,res) => {
                 Password: req.body.Password,
                 confirmPassword: req.body.confirmPassword
             })
+            console.log("the success part" + registerEmployee);
+            const token = await registerEmployee.generateAuthToken();
+            console.log("the success part" + token);
 
             const registered = await registerEmployee.save();
             res.status(201).render("index");
@@ -60,13 +64,16 @@ app.post("/index", async(req,res) => {
     try {
         const name = req.body.Username;
         const password = req.body.Password;
+        const postOf = req.body.postof;
 
         const userName = await Register.findOne({Username:name});
+        const isMatch = await bcrypt.compare(password, userName.Password);
+        const temp = await userName.postof;
 
-        const isMatch = await bcrypt.compare(password, userName.Password) 
-
-        if(isMatch){
+        if(temp == "Head of Department" && isMatch){
             res.status(201).render("dashboard");
+        }else if(temp == "Department Admin" && isMatch){
+            res.status(201).render("tushar");
         }else{
             res.send("Invalid Login Details");
         }
