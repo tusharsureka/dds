@@ -82,11 +82,9 @@
     font-size: large;
 }
 
-
-
   #links{
     margin-left: 250px;
-    width: 100%;
+    /* width: 65%; */
     font-size: 18px;
   }
   #links ul{

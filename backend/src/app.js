@@ -75,6 +75,33 @@ app.post("/index", async(req,res) => {
     }
 })
 
+app.get("/internat" , (req,res) => {
+    res.render("diff_pages/internat")
+})
+app.get("/marketing" , (req,res) => {
+    res.render("diff_pages/marketing")
+})
+app.get("/resourceman" , (req,res) => {
+    res.render("diff_pages/resourceman")
+})
+app.get("/policyprocess" , (req,res) => {
+    res.render("diff_pages/policyprocess")
+})
+app.get("/focusa" , (req,res) => {
+    res.render("diff_pages/focusa")
+})
+
+
+app.get("/KPI1" , (req,res) => {
+    res.render("KPI's/KPI1")
+})
+app.get("/KPI2" , (req,res) => {
+    res.render("KPI's/KPI2")
+})
+app.get("/KPI3" , (req,res) => {
+    res.render("KPI's/KPI3")
+})
+
 app.listen(port, () => {
     console.log(`Server is running at ${port}`);
 })

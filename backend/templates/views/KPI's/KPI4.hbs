@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Page</title>
+    <link rel="stylesheet" href="form_page.css" />
+    <!-- <link rel="stylesheet" href="newformstyle.css"> -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <script src="forpage.js"></script>
+  </head>
+  <body>
+    <div id="navbar_form">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="../diff_pages/Internationalization.html">Internationalization</a>
+        <a href="../diff_pages/Resource_managment.html">Resource Management</a>
+        <a href="../diff_pages/Marketing_and_Branding.html">Marketing And Branding</a>
+        <a href="../diff_pages/Policy_and_process.html">Policy and Process</a>
+        <a href="../diff_pages/Focus_area.html">Focus Area(s)</a>
+      </div>
+      <span onclick="openNav()" style="font-size: 25px">&#9776;</span>
+      <p class="navbar_heading">
+        Directorate Of <br />International Collaborations
+      </p>
+    </div>
+    <div id="form">
+      <div class="container">
+          <header>Form</header>
+  
+          <form action="#">
+              <div class="form first">
+                  <div class="details personal">
+  
+  
+                      <div class="fields">
+                        <div class="input-field">
+                            <label>Department</label>
+                            <select required>
+                                <option disabled selected>Select Department</option>
+                                <option>Department of computer science and Engineering</option>
+                                <option>Department of electical and Engineering</option>
+                                <option>Department of Civil Engineering</option>
+                                <option>Department of Business Studies</option>
+                                <option>Department of Commerce</option>
+                                <option>Department of Mechanical Enginnering</option>
+                            </select>
+                        </div>
+
+                          <div class="input-field">
+                              <label>Name of University/Organization with whom MOU is signed</label>
+                              <input type="text" placeholder="Enter name of organization" required>
+                          </div>
+
+                          <div class="input-field">
+                            <label>Title Of Collaborative Activity</label>
+                            <input type="text" placeholder="Title Of Collaborative Activity" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Name of MUJ student visited through exchange program</label>
+                            <input type="text" placeholder="Name of MUJ student visited through exchange program" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Regestration number of student</label>
+                            <input type="text" placeholder="Regestration no." required>
+                        </div>
+                          <div class="input-field">
+                              <label>Year of Collaboration</label>
+                              <input type="number" placeholder="Enter year" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Duration</label>
+                              <input type="date" placeholder="Duration" required>
+                          </div>
+  
+                          <div class="input-field">
+                            <label>Nature of the activity</label>
+                            <input type="text" placeholder="Nature of the activity" required>
+                        </div>
+                      </div>
+                  </div>
+  
+                  <div class="details ID">
+                          <div class="input-field">
+                              <label>Link of MoU copy</label>
+                              <input type="url" placeholder="Enter issued authority" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Link of all activities under MoU in PDF</label>
+                              <input type="file" placeholder="upload" required>
+                          </div>
+  
+                          <div class="input-field">
+                              <label>Comments</label>
+                              <input type="text" placeholder="Enter your comments" required>
+                              <!-- <textarea name="comments" id="" cols="10" rows="2"></textarea> -->
+                          </div>
+                      </div>
+  
+                      <button class="nextBtn">
+                          <span class="btnText">Next</span>
+                          <i class="uil uil-navigator"></i>
+                      </button>
+                  </div> 
+              </div>
+          </form>
+      </div>
+    </div>
+      <script src="forpage.js"></script>
+
+  </body>
+</html>
