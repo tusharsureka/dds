@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -46,6 +47,7 @@ app.post("/register" ,async(req,res) => {
                 confirmPassword: req.body.confirmPassword
             })
             console.log("the success part" + registerEmployee);
+
             const token = await registerEmployee.generateAuthToken();
             console.log("the success part" + token);
 
@@ -69,6 +71,9 @@ app.post("/index", async(req,res) => {
         const userName = await Register.findOne({Username:name});
         const isMatch = await bcrypt.compare(password, userName.Password);
         const temp = await userName.postof;
+
+        const token = await userName.generateAuthToken();
+        console.log("the success part" + token);
 
         if(temp == "Head of Department" && isMatch){
             res.status(201).render("dashboard");
