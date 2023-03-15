@@ -5,6 +5,7 @@ const app = express();
 const hbs = require("hbs");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
  
 require("./db/conn");
 const Register = require("./models/registers");
@@ -16,6 +17,7 @@ const template_path = path.join(__dirname, "../templates/views" );
 const partials_path = path.join(__dirname, "../templates/partials" );
 
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(static_path));
@@ -51,6 +53,10 @@ app.post("/register" ,async(req,res) => {
             const token = await registerEmployee.generateAuthToken();
             console.log("the success part" + token);
 
+            res.cookie("jwt", token ,{
+                httpOnly:true
+            });
+
             const registered = await registerEmployee.save();
             res.status(201).render("index");
             console.log("saved details");
@@ -74,6 +80,10 @@ app.post("/index", async(req,res) => {
 
         const token = await userName.generateAuthToken();
         console.log("the success part" + token);
+
+        res.cookie("jwt", token ,{
+            httpOnly:true
+        });
 
         if(temp == "Head of Department" && isMatch){
             res.status(201).render("dashboard");
