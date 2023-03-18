@@ -85,7 +85,7 @@
 
   #links{
     margin-left: 250px;
-    width: 100%;
+    width: auto;
     font-size: 18px;
   }
   #links ul{
