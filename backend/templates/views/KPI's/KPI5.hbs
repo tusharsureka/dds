@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Page</title>
-    <link rel="stylesheet" href="css/KPI4.css" />
-    <!-- <link rel="stylesheet" href="newformstyle.css"> -->
+    <link rel="stylesheet" href="css/form_page.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <script src="css/forpage.js"></script>
@@ -30,52 +29,49 @@
     </div>
     <div id="form">
       <div class="container">
-          <header>KPI-5 Number of Academic visits to abroad & from abroad (Conferences/ Workshops/ Symposium/ Visiting Professor)</header>
+            <header>KPI-5 Number of MUJ students participating in exchange programs through MoU(Short/Long Term)</header>
   
-          <form action="#">
+          <form action="/KPI5" method="POST">
               <div class="form first">
                   <div class="details personal">
-  
-  
                       <div class="fields">
                           <div class="input-field">
-                              <label>Name of University visited</label>
-                              <input type="text" placeholder="Enter name of organization" required>
-                          </div>
-  
-                          <div class="input-field">
-                              <label>Name of Faculty</label>
-                              <input type="Text" placeholder="Faculty name" required>
-                          </div>
-  
-                          <div class="input-field">
-                              <label>Department</label>
-                              <select required>
-                                  <option disabled selected>Select Department</option>
-                                  <option>Department of computer science and Engineering</option>
-                                  <option>Department of electical and Engineering</option>
-                                  <option>Department of Civil Engineering</option>
-                                  <option>Department of Business Studies</option>
-                                  <option>Department of Commerce</option>
-                                  <option>Department of Mechanical Enginnering</option>
-                              </select>
-                          </div>
-  
-                          <div class="input-field">
-                              <label>Country</label>
-                              <input type="text" placeholder="Country" required>
-                          </div>
-  
-                          <div class="input-field">
-                              <label>Date of visit</label>
-                              <input type="date" placeholder="date of visit" required>
-                          </div>
-  
-                          <div class="input-field">
-                            <label>Title of Actvity</label>
-                            <input type="text" placeholder="Activity" required>
-                        </div>
+                <label>Name of University visited</label>
+                <input type="text" placeholder="Enter name of organization" name="university" required>
+              </div>
 
+              <div class="input-field">
+                <label>Name of Faculty</label>
+                <input type="Text" placeholder="Faculty name" name="faculty" required>
+              </div>
+
+              <div class="input-field">
+                <label>Department</label>
+                <select name="department" required>
+                  <option disabled selected>Select Department</option>
+                  <option>Department of computer science and Engineering</option>
+                  <option>Department of electical and Engineering</option>
+                  <option>Department of Civil Engineering</option>
+                  <option>Department of Business Studies</option>
+                  <option>Department of Commerce</option>
+                  <option>Department of Mechanical Enginnering</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Country</label>
+                <input type="text" placeholder="Country" name="country" required>
+              </div>
+
+              <div class="input-field">
+                <label>Date of visit</label>
+                <input type="date" placeholder="date of visit" name="date" required>
+              </div>
+
+              <div class="input-field">
+                <label>Title of Actvity</label>
+                <input type="text" placeholder="Activity" name="title" required>
+              </div>
                       </div>
                   </div>
   
@@ -83,33 +79,25 @@
   
                       <div class="fields">
                           <div class="input-field">
-                              <label>Nature of Activity</label>
-                              <input type="text" placeholder="Activity" required>
-                          </div>
-  
-                          <div class="input-field">
-                              <label>Link of all activities under MoU in PDF</label>
-                              <input type="file" placeholder="upload" required>
-                          </div>
-  
-                          <div class="input-field">
-                              <label>Comments</label>
-                              <input type="text" placeholder="Enter your comments" required>
-                              <!-- <textarea name="comments" id="" cols="10" rows="2"></textarea> -->
-                          </div>
+                <label>Nature of Activity</label>
+                <input type="text" placeholder="Activity" name="nature" required>
+              </div>
+
+              <div class="input-field">
+                <label>Link of all activities under MoU in PDF</label>
+                <input type="file" placeholder="upload" name="pdf" required>
+              </div>
+
+              <div class="input-field">
+                <label>Comments</label>
+                <input type="text" placeholder="Enter your comments" name="comments" required>
+              </div>
                       </div>
   
                       <button class="nextBtn">
-                          <span class="btnText">Save Details</span>
+                          <span class="btnText">Next</span>
                           <i class="uil uil-navigator"></i>
                       </button>
-                      <button class="nextBtn">  
-                        <span class="btnText">Submit</span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
-                  </div> 
-              </div>
-                      </div>
                   </div> 
               </div>
           </form>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Page</title>
+    <link rel="stylesheet" href="css/form_page.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <script src="css/forpage.js"></script>
+  </head>
+  <body>
+    <div id="navbar_form">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="/internat">Internationalization</a>
+          <a href="/marketing">Marketing And Branding</a>
+          <a href="/resourceman">Resource Managment</a>
+          <a href="/policyprocess">Policy And Process</a>
+          <a href="/focusa">Focus Area(s)</a>
+      </div>
+      <span onclick="openNav()" style="font-size: 25px">&#9776;</span>
+      <p class="navbar_heading">
+        Directorate Of <br />International Collaborations
+      </p>
+    </div>
+    <div id="form">
+      <div class="container">
+            <header>KPI-11 Number of MUJ students participating in exchange programs through MoU(Short/Long Term)</header>
+  
+          <form action="/KPI11" method="POST">
+              <div class="form first">
+                  <div class="details personal">
+                      <div class="fields">
+                          <div class="input-field">
+                <label>Name of University</label>
+                <input type="text" placeholder="Enter name of University" name="university" required>
+              </div>
+
+              <div class="input-field">
+                <label>Name of Country</label>
+                <input type="text" placeholder="Enter country" name="country" required>
+              </div>
+
+              <div class="input-field">
+                <label>Date of Activity</label>
+                <input type="date" placeholder="Enter date" name="date" required>
+              </div>
+
+              <div class="input-field">
+                <label>Type of Activity</label>
+                <input type="text" placeholder="Enter type" name="type" required>
+              </div>
+
+              <div class="input-field">
+                <label>Name of Activity</label>
+                <input type="text" placeholder="Enter name" name="typeactivity" required>
+              </div>
+
+              <div class="input-field">
+                <label>Total External Participation</label>
+                <input type="number" placeholder="Enter Number" name="participation" required>
+              </div>
+                      </div>
+                  </div>
+  
+                  <div class="details ID">
+  
+                      <div class="fields">
+                          <div class="input-field">
+                <label>Link of Activity report</label>
+                <input type="url" placeholder="link" name="link" required>
+              </div>
+
+              <div class="input-field">
+                <label>Comments</label>
+                <input type="text" placeholder="Enter your comments" name="comments" required>
+              </div>
+                      </div>
+  
+                      <button class="nextBtn">
+                          <span class="btnText">Next</span>
+                          <i class="uil uil-navigator"></i>
+                      </button>
+                  </div> 
+              </div>
+          </form>
+      </div>
+    </div>
+      <script src="forpage.js"></script>
+
+  </body>
+</html>

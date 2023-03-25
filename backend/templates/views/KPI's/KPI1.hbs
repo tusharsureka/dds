@@ -31,13 +31,13 @@
       <div class="container">
           <header>Form</header>
   
-          <form action="/dashboard" method="POST">
+          <form action="/KPI1" method="POST">
               <div class="form first">
                   <div class="details personal">
                       <div class="fields">
                           <div class="input-field">
                               <label>Name of University with whom MOU is signed</label>
-                              <input type="text" placeholder="Enter name of organization">
+                              <input type="text" placeholder="Enter name of organization" name="name" required>
                           </div>
   
                           <div class="input-field">
@@ -47,7 +47,7 @@
   
                           <div class="input-field">
                               <label>Department</label>
-                              <select required name="department">
+                              <select name="department" required>
                                   <option disabled selected>Select Department</option>
                                   <option>Department of computer science and Engineering</option>
                                   <option>Department of electical and Engineering</option>
@@ -70,7 +70,7 @@
   
                           <div class="input-field">
                               <label>Does the MoU is with QS</label>
-                              <select required name="qs">
+                              <select name="qs" required>
                                   <option disabled selected>Select</option>
                                   <option>Yes</option>
                                   <option>No</option>
